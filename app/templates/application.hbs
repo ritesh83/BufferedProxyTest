@@ -1,3 +1,30 @@
 <h2 id='title'>Welcome to Ember.js</h2>
 
-{{outlet}}
+<div>
+    <span>Comment: </span>
+    <span>{{comment.text}}</span>    
+</div>
+
+<div>
+    <span>Edit Comment: </span>
+    {{input type="text" value=bufferedContent.comment.text}}
+</div>
+
+<div>
+    <span>Title: </span>
+    <span>{{title}}</span>    
+</div>
+
+<div>
+    <span>Edit title: </span>
+    {{input type="text" value=bufferedContent.title}}
+</div>
+
+<div>
+    <button {{action "save"}}>
+        Save
+    </button>
+    <button {{action "cancel"}}>
+        Cancel
+    </button>
+</div>
